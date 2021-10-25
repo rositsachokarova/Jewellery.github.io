@@ -1,0 +1,135 @@
+<!Doctype html>
+<html>
+<head>
+	<!--- FA FA ICONS -->
+	<script src="https://kit.fontawesome.com/b1d0ed65fc.js" crossorigin="anonymous">
+	</script>
+	<link type="text/css" rel="stylesheet" href="ExternalCss1.css" media="screen">
+	<title>Jewellery shop</title>
+
+</head>
+<body>
+	<a href="signUp.php">
+		<span style="font-size: 2em; color: #ff8ea7;">
+	<i2 class="fas fa-user"></i2></span>
+	<a href="favouritePage.php">
+	<span style="font-size: 2em; color: #ff8ea7;">
+  <i class="fas fa-heart"></i>
+</span></a>
+<a href="basketPage.php">
+	<span style="font-size: 2em; color: grey;">
+  <i class="fas fa-shopping-cart"></i>
+</span></a>
+	<div id="topContainer"> <!--- the place provided for the logo --->
+		<div id="logo"><img src="Pictures/jewellery.world.png" height="330px" width="500px" alt="Jewellery Logo">
+		</div>
+	</div>
+	<nav id="navBar">
+		<ul id="navList"> <!---navigation menu --->
+			<li class="activeLi"><a class="activeTxt" href="#">About Us</a></li>
+			<li><a href="MainPage.html">Home</a></li>
+			<li>
+				<span style="font-size: 3em"><i class="far fa-gem"></i>
+				</span></li>
+			<div class="dropdown">
+					<button class="dropbtn">Shop
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="shopProd.php?id=Bracelets">Bracelets</a>
+					<a href="shopProd.php?id=Necklaces">Necklaces</a>
+					<a href="shopProd.php?id=Earrings">Earrings</a>
+					<a href="shopProd.php?id=Rings">Rings</a>
+				</div>
+			</div>
+
+		</ul>
+	</nav>
+	<div class="column-central">
+		<div id="firstDesc">
+		<br>
+		<h1>Contact us</h1>
+		<i1 class="fas fa-phone-alt"></i1><a href="tel:1234567"><p1>Call us<p1></a><br>
+			<i1 class="fas fa-envelope-open-text"></i1><a href="mailto:w1694528@my.westminster.ac.uk?subject=Information Request"><p1>Email Us<p1></a>
+			<p>Our shop is operating online only. We are trying to provide the best possible service for our clients.
+				The online shop were created the end of 2020. We are a company who creates our jewellery most of the time by hand.
+				We are trying to provide the best and the fastest experience for you.
+			</p>
+		</div>
+
+		<div id="radiusBorder1">
+
+	<form name="Review">
+	<h1>Give us a feedback</h1>
+	<p>Enter your Name: <input type="text" name="firstName" id="firstName"><br /><br /> <!--- to want an input from the user's name --->
+
+
+	<p>Enter your email: <input type='text' id='txtEmail'/><br /><br /> <!--- input for the user's email// --->
+
+	</p>
+	<p>Rating <br /> <!--- options for the user to choose --->
+				Bad:<input type="radio" name="r" value="Bad"><br />
+				Good:	<input type="radio" name="r" value="Good"><br />
+				Great:	<input type="radio" name="r" value="Great"><br /></p>
+	<p><label for="comments">Comments: </label>
+	 <textarea name="comments" id="comments" rows="5" cols="20"> </textarea>
+
+	</p>
+	 <input type='button' Value='submit' id="submit">
+
+ </form>
+	</div>
+	</div>
+
+	<a href="#topContainer"><i1 class="fas fa-arrow-up"></i1></a>
+	<script>
+
+
+/// function for the validation of the email.Display an alert if nothing.
+
+	function checkEmail() {
+
+			var email = document.getElementById('txtEmail');
+			var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+			if (!filter.test(email.value)) {
+					alert('Please provide a valid email address');
+					email.focus;
+					return false;
+			}
+			else {
+				alert('Your email address that you provide is ' + filter.test(email.value))
+			}
+
+	}
+	// function that validates the rating choice
+	function getRadioValue( radioArray ) {
+ var i;
+ for ( i = 0; i < radioArray.length; i++ ) {
+		if ( radioArray[ i ].checked ) {
+			 return radioArray[ i ].value;
+		}
+ }
+ return value;
+}
+
+//function to validate that everything needed is entered by the user, and submit it by displaying an alert
+document.getElementById("submit").addEventListener("click", function(){
+var firstName = document.getElementById("firstName").value;
+if (firstName == "") {
+		alert("You didn't enter your Name! Please fill the required field.");
+	}
+else{
+var comments = document.getElementById("comments").value;
+alert('Dear ' + firstName + ", Thank you very much for your feedback. You have rated our site as " + getRadioValue(document.getElementsByName("r")) +" and your comment is " + comments)
+
+}});
+
+</script>
+</body>
+</html>
+
+<!-- References */
+/* https://fontawesome.com/v5.15/icons?d=gallery&p=2 */
+/* https://www.w3schools.com/ */
+/* Pictures created by Izabel Velkovska */ -->
