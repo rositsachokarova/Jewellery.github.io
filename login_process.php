@@ -35,7 +35,7 @@ if(!empty($_POST['emailAddress']) || !empty($_POST['password'])){
 
   				echo "<b>Login successful!</b>";
   				echo "<p>Hello ".$_SESSION['fname']." ".$_SESSION['sname'];
-          echo "<br>Go back to : <a href='MainPage.html'>Home Page</a>";
+          echo "<br>Go back to : <a href='index.html'>Home Page</a>";
 	}
 }
 }

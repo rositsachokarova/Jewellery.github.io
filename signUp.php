@@ -27,7 +27,7 @@ echo "</div>";
 echo "<nav id='navBar'>";
 echo "<ul id='navList'>";
 echo "<li><a href='AboutUs.html'>About Us</a></li>";
-echo "<li><a href='MainPage.html'>Home</a></li>";
+echo "<li><a href='index.html'>Home</a></li>";
 echo "<li>";
 echo "<span style='font-size: 3em'><i class='far fa-gem'></i></span></li>";
 echo "<div class='dropdown'>";
@@ -99,7 +99,7 @@ echo "<br>";
 echo "<br>";
 
 echo "<input type=submit value='Log In' name='LogIn'>";
-echo "<input type=submit value='Clear Form' name='clearForm'>";
+echo "<input type=reset value='Clear Form' name='clearForm'>";
 
 
 echo "</form>";

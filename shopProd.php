@@ -26,7 +26,7 @@ echo "</div>";
 echo "<nav id='navBar'>";
 echo "<ul id='navList'>";
 echo "<li><a href='AboutUs.html'>About Us</a></li>";
-echo "<li><a href='MainPage.html'>Home</a></li>";
+echo "<li><a href='index.html'>Home</a></li>";
 echo "<li>";
 echo "<span style='font-size: 3em'><i class='far fa-gem'></i></span></li>";
 echo "<div class='dropdown'>";
